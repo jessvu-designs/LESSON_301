@@ -28,7 +28,7 @@ export default function MonthPicker({ selected, onChange }) {
           borderRadius: '999px',
           padding: '0.5em 2.2em 0.5em 1.2em', // extra right padding for chevron
           border: '1.5px solid #E8AFC3',
-          background: '#FFFDF9',
+          backgroundColor: '#fff',
           color: '#B03A5B',
           fontWeight: 600,
           fontSize: '1em',
