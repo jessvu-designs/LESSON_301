@@ -1,5 +1,6 @@
 .recently-read-card {
-  width: 520px;
+  flex: 1 1 0;
+  min-width: 0;
   height: 440px;
   background: #fff;
   border-radius: 16px;
@@ -10,13 +11,15 @@
   align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
+  max-width: 100%;
 }
 .recently-read-title {
   font-family: 'Lora', serif;
   font-weight: 700;
   font-size: 18px;
   color: #B03A5B;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.2rem;
 }
 .recently-read-list {
   list-style: none;
@@ -34,6 +37,15 @@
   padding: 0.7rem 0;
   border-bottom: 1px solid #f4c6d7;
   font-size: 1.08em;
+  gap: 0.8em;
+}
+.book-cover {
+  width: 32px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(176,58,91,0.10);
 }
 .recently-read-item:last-child {
   border-bottom: none;
@@ -42,6 +54,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.1em;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1 1 0;
 }
 .book-title {
   font-weight: 600;

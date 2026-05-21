@@ -57,15 +57,26 @@ export default function GenresPieChart({ data }) {
         bodyColor: '#222',
       },
       title: {
-        display: true,
+        display: false, // Hide Chart.js title, use visible heading instead
         text: 'Genres Read',
-        color: '#B03A5B',
-        font: { size: 18, weight: 'bold', family: 'Lora, serif' },
       },
     },
   };
 
   return (
-    <Pie data={chartData} options={{...options, maintainAspectRatio: false}} width={320} height={320} />
+    <div style={{ width: '100%' }}>
+      <h3 style={{
+        fontFamily: 'Lora, serif',
+        color: '#B03A5B',
+        fontWeight: 700,
+        fontSize: '1.2em',
+        textAlign: 'center',
+        marginBottom: '1em',
+        width: '100%',
+      }}>Genres Read</h3>
+      <div style={{ width: '100%', height: '320px', display: 'flex', alignItems: 'center' }}>
+        <Pie data={chartData} options={{...options, maintainAspectRatio: false}} />
+      </div>
+    </div>
   );
 }

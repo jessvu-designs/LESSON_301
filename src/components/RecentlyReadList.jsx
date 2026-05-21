@@ -3,11 +3,11 @@ import '../styles/recentlyReadList.css';
 
 // Example data, replace with real data as needed
 const recentBooks = [
-  { title: 'Atomic Habits', author: 'James Clear', rating: 5 },
-  { title: 'The Midnight Library', author: 'Matt Haig', rating: 4 },
-  { title: 'Educated', author: 'Tara Westover', rating: 5 },
-  { title: 'Project Hail Mary', author: 'Andy Weir', rating: 4 },
-  { title: 'The Silent Patient', author: 'Alex Michaelides', rating: 3 },
+  { title: 'Atomic Habits', author: 'James Clear', rating: 5, cover: 'https://covers.openlibrary.org/b/id/10594763-S.jpg' },
+  { title: 'The Midnight Library', author: 'Matt Haig', rating: 4, cover: 'https://covers.openlibrary.org/b/id/10594764-S.jpg' },
+  { title: 'Educated', author: 'Tara Westover', rating: 5, cover: 'https://covers.openlibrary.org/b/id/10594765-S.jpg' },
+  { title: 'Project Hail Mary', author: 'Andy Weir', rating: 4, cover: 'https://covers.openlibrary.org/b/id/10594766-S.jpg' },
+  { title: 'The Silent Patient', author: 'Alex Michaelides', rating: 3, cover: 'https://covers.openlibrary.org/b/id/10594767-S.jpg' },
 ];
 
 function renderStars(rating) {
@@ -27,6 +27,7 @@ export default function RecentlyReadList() {
       <ul className="recently-read-list">
         {recentBooks.map((book, idx) => (
           <li key={idx} className="recently-read-item">
+            <img className="book-cover" src={book.cover} alt={book.title + ' cover'} />
             <div className="book-info">
               <span className="book-title">{book.title}</span>
               <span className="book-author">by {book.author}</span>
