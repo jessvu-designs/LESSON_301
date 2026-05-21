@@ -1,0 +1,139 @@
+.profile-info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.profile-metric-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #B03A5B;
+}
+.fire-emoji {
+  font-size: 1.2em;
+  margin-right: 0.1em;
+  vertical-align: middle;
+}
+
+.profile-metric-label {
+  font-weight: 700;
+  margin-right: 0.3em;
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+
+.profile-metric-value {
+  color: #222;
+  font-weight: 600;
+}
+.currently-reading-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+  background: rgba(244, 198, 215, 0.18);
+  border-radius: 10px;
+  padding: 0.3rem 0.9rem 0.3rem 0.7rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #B03A5B;
+  width: fit-content;
+}
+
+.currently-reading-label {
+  font-weight: 700;
+  margin-right: 0.5em;
+  color: #B03A5B;
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+
+.currently-reading-book {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.book-cover-placeholder {
+  font-size: 1.3em;
+  margin-right: 0.2em;
+}
+
+.book-title {
+  font-weight: 600;
+  color: #222;
+}
+
+.book-author {
+  font-size: 0.98em;
+  color: #7a6a6a;
+  margin-left: 0.4em;
+}
+.reader-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 16px;
+  padding: 1.2rem 2.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px rgba(176,58,91,0.08);
+  width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+
+.reader-profile-avatar {
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(176,58,91,0.10);
+  background: none;
+  padding: 0;
+}
+
+.cartoon-avatar {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.card-bg {
+  background: rgba(255,255,255,0.96);
+  border: 1.5px solid #E8AFC3;
+}
+
+.reader-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reader-profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #B03A5B;
+  letter-spacing: 0.01em;
+}
+
+.reader-profile-desc {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.reader-profile-meta {
+  font-size: 0.98rem;
+  color: #7a6a6a;
+}

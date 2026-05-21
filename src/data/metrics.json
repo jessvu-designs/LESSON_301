@@ -1,0 +1,72 @@
+[
+  {
+    "month": "January",
+    "books": 4,
+    "pages": 1200,
+    "hours": 15,
+    "started": 5,
+    "finished": 4,
+    "toRead": 8,
+    "momChange": 0,
+    "genres": ["Fiction", "Fantasy"],
+    "mood": "😊",
+    "avgReadingTime": 30,
+    "streak": 10
+  },
+  {
+    "month": "February",
+    "books": 3,
+    "pages": 900,
+    "hours": 12,
+    "started": 4,
+    "finished": 3,
+    "toRead": 7,
+    "momChange": -1,
+    "genres": ["Nonfiction", "Memoir"],
+    "mood": "😌",
+    "avgReadingTime": 25,
+    "streak": 8
+  },
+  {
+    "month": "March",
+    "books": 5,
+    "pages": 1500,
+    "hours": 18,
+    "started": 6,
+    "finished": 5,
+    "toRead": 6,
+    "momChange": 2,
+    "genres": ["Fiction", "Sci-Fi"],
+    "mood": "🤩",
+    "avgReadingTime": 35,
+    "streak": 12
+  },
+  {
+    "month": "April",
+    "books": 2,
+    "pages": 600,
+    "hours": 8,
+    "started": 3,
+    "finished": 2,
+    "toRead": 9,
+    "momChange": -3,
+    "genres": ["Poetry"],
+    "mood": "😐",
+    "avgReadingTime": 20,
+    "streak": 5
+  },
+  {
+    "month": "May",
+    "books": 6,
+    "pages": 1800,
+    "hours": 20,
+    "started": 7,
+    "finished": 6,
+    "toRead": 5,
+    "momChange": 4,
+    "genres": ["Fiction", "Romance"],
+    "mood": "😁",
+    "avgReadingTime": 40,
+    "streak": 15
+  }
+]
