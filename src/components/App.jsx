@@ -9,7 +9,7 @@ import MonthPicker from './MonthPicker';
 import Toolbar from './Toolbar';
 import { getFilteredData } from '../utils/dataUtils';
 import GenresPieChart from './GenresPieChart';
-import '../styles/monthlySummary.css';
+import '../styles/metrics-list.css';
 import '../styles/dashboard.css';
 import '../styles/recentlyReadList.css';
 import '../styles/monthPicker.css';

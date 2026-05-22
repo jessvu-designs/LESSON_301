@@ -1,0 +1,61 @@
+/* Renamed from monthlySummary.css to metrics-list.css */
+
+.metrics-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+  justify-content: stretch;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  flex: 1 1 0;
+}
+
+.metrics-item {
+  background: rgba(244, 198, 215, 0.92);
+  border-radius: 16px;
+  padding: 1.2rem 2.2rem;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  box-shadow: 0 2px 12px 0 rgba(176, 58, 91, 0.10), 0 1px 4px 0 rgba(0,0,0,0.04);
+  text-align: left;
+  color: #222;
+  border: 1.5px solid #E8AFC3;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.metrics-item:hover {
+  background: #FFF6F0;
+  box-shadow: 0 2px 8px rgba(176,58,91,0.10);
+  cursor: pointer;
+}
+
+.metrics-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  color: #B03A5B;
+  text-shadow: 0 1px 4px rgba(244, 198, 215, 0.18);
+  font-size: 18px;
+}
+
+.metrics-item p {
+  color: #222;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+  font-size: 2.4em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
