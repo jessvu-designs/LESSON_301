@@ -89,6 +89,7 @@
   margin-left: 0.8em;
   display: flex;
   align-items: center;
+}
 .stars {
   color: #FFF9D6; /* very light yellow for empty stars */
   font-size: 1.1em;
