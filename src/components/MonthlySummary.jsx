@@ -40,11 +40,12 @@ export default function MonthlySummary({ data, selectedMonth }) {
     );
   } else if (data.length === 1) {
     const item = data[0];
+    const books = item.books ?? 0;
+    const pages = item.pages ?? 0;
+    const hours = item.hours ?? 0;
+    const toRead = item.toRead ?? 0;
     summary = (
       <div className="metrics-list">
-        // Adding fallbacks for missing metric values
-        const books = item.books ?? 0;
-        const pages = item.pages ?? 0;
         <div className="metrics-item kpi-card">
           <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
             <span role="img" aria-label="Books" style={{marginRight: '0.3em'}}>📚</span>Books
@@ -61,13 +62,13 @@ export default function MonthlySummary({ data, selectedMonth }) {
           <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
             <span role="img" aria-label="Hours" style={{marginRight: '0.3em'}}>⏰</span>Hours
           </h3>
-          <p>{item.hours ?? 0}</p>
+          <p>{hours}</p>
         </div>
         <div className="metrics-item kpi-card">
           <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
             <span role="img" aria-label="To-Read" style={{marginRight: '0.3em'}}>📝</span>To-Read
           </h3>
-          <p>{item.toRead ?? 0}</p>
+          <p>{toRead}</p>
         </div>
       </div>
     );
