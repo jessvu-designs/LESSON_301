@@ -1,3 +1,12 @@
+/* Flexbox for metrics list */
+.metrics-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+}
 /* Dashboard layout improvements for Vuetify-like alignment */
 .dashboard-outer {
   min-height: 100vh;
