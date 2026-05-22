@@ -4,18 +4,25 @@ import '../styles/recentlyReadList.css';
 // Example data, replace with real data as needed
 const recentBooks = [
   { title: 'Atomic Habits', author: 'James Clear', rating: 5, cover: 'https://covers.openlibrary.org/b/id/10594763-S.jpg' },
-  { title: 'The Midnight Library', author: 'Matt Haig', rating: 4, cover: 'https://covers.openlibrary.org/b/id/10594764-S.jpg' },
-  { title: 'Educated', author: 'Tara Westover', rating: 5, cover: 'https://covers.openlibrary.org/b/id/10594765-S.jpg' },
-  { title: 'Project Hail Mary', author: 'Andy Weir', rating: 4, cover: 'https://covers.openlibrary.org/b/id/10594766-S.jpg' },
-  { title: 'The Silent Patient', author: 'Alex Michaelides', rating: 3, cover: 'https://covers.openlibrary.org/b/id/10594767-S.jpg' },
+  { title: 'The Midnight Library', author: 'Matt Haig', rating: 4.5, cover: 'https://covers.openlibrary.org/b/id/10594764-S.jpg' },
+  { title: 'Educated', author: 'Tara Westover', rating: 4, cover: 'https://covers.openlibrary.org/b/id/10594765-S.jpg' },
+  { title: 'Project Hail Mary', author: 'Andy Weir', rating: 3.5, cover: 'https://covers.openlibrary.org/b/id/10594766-S.jpg' },
+  { title: 'The Silent Patient', author: 'Alex Michaelides', rating: 2, cover: 'https://covers.openlibrary.org/b/id/10594767-S.jpg' },
 ];
 
 function renderStars(rating) {
   return (
     <span className="stars" aria-label={`Rating: ${rating} out of 5 stars`}>
-      {Array.from({ length: 5 }).map((_, i) =>
-        <span key={i} className={i < rating ? 'star filled' : 'star'} aria-hidden="true">★</span>
-      )}
+      {Array.from({ length: 5 }).map((_, i) => {
+        if (i + 1 <= Math.floor(rating)) {
+          return <span key={i} className="star filled" aria-hidden="true">★</span>;
+        } else if (i < rating && rating % 1 !== 0) {
+          return <span key={i} className="star half" aria-hidden="true">★</span>;
+        } else {
+          return <span key={i} className="star" aria-hidden="true">★</span>;
+        }
+      })}
+      <span className="star-rating-number" aria-hidden="true">{rating.toFixed(1)}</span>
     </span>
   );
 }

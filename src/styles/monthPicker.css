@@ -5,14 +5,15 @@ select#month-picker:hover, select#month-picker:focus {
   box-shadow: 0 4px 24px 0 rgba(176, 58, 91, 0.16), 0 2px 8px 0 rgba(0,0,0,0.06);
   border: 1.5px solid #B03A5B;
   transform: translateY(-1px) scale(1.01);
+  cursor: pointer;
 }
 select#month-picker {
-  padding-right: 2.5em !important;
+  padding-right: 3.5em !important;
   background-color: #fff;
   /* Remove default arrow */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   /* Even bigger custom chevron SVG as background */
-  background: url('data:image/svg+xml;utf8,<svg fill="%23B03A5B" height="32" viewBox="0 0 20 20" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 1.2em center/2em auto;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23B03A5B" height="32" viewBox="0 0 20 20" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 0.5em center/2em auto;
 }

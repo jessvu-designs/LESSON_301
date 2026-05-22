@@ -26,18 +26,17 @@ export default function MonthPicker({ selected, onChange }) {
         onChange={e => onChange(e.target.value)}
         tabIndex={0}
         aria-label="Select month"
-        style={{
-          borderRadius: '999px',
-          padding: '0.5em 2.2em 0.5em 1.2em',
-          border: '1.5px solid #E8AFC3',
-          backgroundColor: '#fff',
-          color: '#8A2542',
-          fontWeight: 600,
-          fontSize: '1em',
-          outline: 'none',
-          boxShadow: '0 1px 4px rgba(244,198,215,0.10)',
-          transition: 'border 0.2s',
-        }}
+            style={{
+              borderRadius: '999px',
+              padding: '0.5em 2.2em 0.5em 1.2em',
+              backgroundColor: '#fff',
+              color: '#8A2542',
+              fontWeight: 600,
+              fontSize: '1em',
+              outline: 'none',
+              boxShadow: '0 1px 4px rgba(244,198,215,0.10)',
+              transition: 'border 0.2s',
+            }}
       >
         {months.map(m => (
           <option key={m} value={m}>{m}</option>
