@@ -3,18 +3,18 @@
 }
 
 .recently-read-item:hover {
-  background: #FFF6F0;
-  box-shadow: 0 2px 8px rgba(176,58,91,0.10);
+  background: #FBF5EA;
+  box-shadow: 0 1px 3px rgba(47, 42, 37, 0.04);
   cursor: pointer;
 }
 .recently-read-card {
   flex: 1 1 0;
   min-width: 0;
   height: 440px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(176,58,91,0.08);
-  border: 2px solid #E8AFC3;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(47, 42, 37, 0.04), 0 1px 3px rgba(47, 42, 37, 0.03);
+  border: 1px solid rgba(232, 221, 207, 0.7);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -24,10 +24,10 @@
   max-width: 100%;
 }
 .recently-read-title {
-  font-family: 'Lora', serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 18px;
-  color: #8A2542;
+  color: var(--accent-primary);
   margin-bottom: 0.7rem;
   margin-top: 0.2rem;
 }
@@ -48,7 +48,7 @@
   align-items: center;
   gap: 1.2em;
   padding: 0.8em 0;
-  border-bottom: 1px solid #f4c6d7;
+  border-bottom: 1px solid var(--border-muted);
   font-size: 1.08em;
 }
 
@@ -62,7 +62,7 @@
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
-  box-shadow: 0 1px 4px rgba(176,58,91,0.10);
+  box-shadow: 0 1px 4px rgba(47, 42, 37, 0.10);
 }
 
 .book-info {
@@ -76,13 +76,13 @@
 
 .book-title {
   font-weight: 700;
-  color: #222;
+  color: var(--text-primary);
   font-size: 1.13em;
 }
 
 .book-author {
   font-size: 1em;
-  color: #7a6a6a;
+  color: var(--text-secondary);
 }
 
 .book-rating {
@@ -91,23 +91,23 @@
   align-items: center;
 }
 .stars {
-  color: #FFF9D6; /* very light yellow for empty stars */
+  color: var(--border-muted); /* muted for empty stars */
   font-size: 1.1em;
   display: flex;
   align-items: center;
   gap: 0.2em;
 }
 .star.filled {
-  color: #FFB300; /* deeper gold for filled stars */
+  color: var(--accent-secondary); /* warm gold-brown filled */
 }
 .star.half {
-  color: #FFB300;
+  color: var(--accent-secondary);
   opacity: 0.5;
 }
 .star-rating-number {
   font-size: 0.95em;
   font-weight: 600;
-  color: #B08B00;
+  color: var(--accent-primary);
   margin-left: 0.4em;
   letter-spacing: 0.01em;
 }

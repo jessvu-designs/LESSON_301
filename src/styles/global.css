@@ -1,14 +1,27 @@
+:root {
+  --bg-app: #FBF4EA;          /* warm paper */
+  --bg-surface: #FFF9F2;      /* light cream */
+  --text-primary: #2F2A25;    /* dark ink */
+  --text-secondary: #5C5148;  /* softer brown-gray */
+  --accent-primary: #7B5A45;  /* leather / book spine brown */
+  --accent-secondary: #D08B5B;/* warm gold-brown */
+  --border-muted: #E8DDCF;
+
+  --font-heading: 'Cormorant Garamond', 'Merriweather', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  background: radial-gradient(circle at 50% 30%, #F4C6D7 0%, #F6E7B2 100%);
-  color: #181818;
+  font-family: var(--font-body);
+  background: var(--bg-app);
+  color: var(--text-primary);
   min-height: 100vh;
 }
 
 /* Ensure visible focus for all interactive elements */
 a, button, select, input, textarea, [tabindex]:not([tabindex="-1"]) {
-  outline: 3px solid #ffe066;
+  outline: 3px solid var(--accent-secondary);
   outline-offset: 2px;
   transition: outline 0.2s;
 }
@@ -27,7 +40,7 @@ a, button, select, input, textarea, [tabindex]:not([tabindex="-1"]) {
 
 /* Focus indicator for accessibility */
 :focus {
-  outline: 3px solid #ffe066;
+  outline: 3px solid var(--accent-secondary);
   outline-offset: 2px;
   transition: outline 0.2s;
 }
@@ -56,8 +69,8 @@ a, button, select, input, textarea, [tabindex]:not([tabindex="-1"]) {
 }
 
 h1, h2, h3 {
-  color: #8A2542;
-  text-shadow: 0 2px 8px rgba(244, 198, 215, 0.18);
-  font-family: 'Lora', serif;
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
   font-weight: 700;
+  letter-spacing: -0.005em;
 }

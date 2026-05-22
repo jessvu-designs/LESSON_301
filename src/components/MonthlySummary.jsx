@@ -13,25 +13,25 @@ export default function MonthlySummary({ data, selectedMonth }) {
     summary = (
       <div className="metrics-list">
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="Books" style={{marginRight: '0.3em'}}>📚</span>Books Read
           </h3>
           <p>{books}</p>
         </div>
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="Pages" style={{marginRight: '0.3em'}}>📄</span>Pages Read
           </h3>
           <p>{pages}</p>
         </div>
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="Hours" style={{marginRight: '0.3em'}}>⏰</span>Hours
           </h3>
           <p>{hours}</p>
         </div>
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="To-Read" style={{marginRight: '0.3em'}}>📝</span>To-Read
           </h3>
           <p>{toRead}</p>
@@ -47,25 +47,25 @@ export default function MonthlySummary({ data, selectedMonth }) {
     summary = (
       <div className="metrics-list">
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="Books" style={{marginRight: '0.3em'}}>📚</span>Books
           </h3>
           <p>{books}</p>
         </div>
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="Pages" style={{marginRight: '0.3em'}}>📄</span>Pages
           </h3>
           <p>{pages}</p>
         </div>
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="Hours" style={{marginRight: '0.3em'}}>⏰</span>Hours
           </h3>
           <p>{hours}</p>
         </div>
         <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
+          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
             <span role="img" aria-label="To-Read" style={{marginRight: '0.3em'}}>📝</span>To-Read
           </h3>
           <p>{toRead}</p>

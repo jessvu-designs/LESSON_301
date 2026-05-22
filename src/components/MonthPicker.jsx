@@ -19,7 +19,7 @@ const months = [
 export default function MonthPicker({ selected, onChange }) {
   return (
     <div style={{ margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
-      <label htmlFor="month-picker" style={{ fontWeight: 500, color: '#8A2542' }}>Month:</label>
+      <label htmlFor="month-picker" style={{ fontWeight: 500, color: '#7B5A45' }}>Month:</label>
       <select
         id="month-picker"
         value={selected}
@@ -29,12 +29,12 @@ export default function MonthPicker({ selected, onChange }) {
             style={{
               borderRadius: '999px',
               padding: '0.5em 2.2em 0.5em 1.2em',
-              backgroundColor: '#fff',
-              color: '#8A2542',
+              backgroundColor: '#FFFDF8',
+              color: '#7B5A45',
               fontWeight: 600,
               fontSize: '1em',
               outline: 'none',
-              boxShadow: '0 1px 4px rgba(244,198,215,0.10)',
+              boxShadow: '0 1px 4px rgba(47, 42, 37, 0.06)',
               transition: 'border 0.2s',
             }}
       >

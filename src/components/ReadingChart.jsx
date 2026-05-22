@@ -14,16 +14,17 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export default function ReadingChart({ data, selectedMonth }) {
   // Highlight selected month if not 'All'
-  const highlightColor = 'rgba(176, 58, 91, 0.85)';
+  const booksHighlight = 'rgba(123, 90, 69, 0.9)';   // primary accent
+  const pagesHighlight = 'rgba(208, 139, 91, 0.9)';  // secondary accent
   const booksColors = data.map(item =>
     selectedMonth && selectedMonth !== 'All' && item.month === selectedMonth
-      ? highlightColor
-      : 'rgba(244, 198, 215, 0.8)'
+      ? booksHighlight
+      : 'rgba(123, 90, 69, 0.45)'
   );
   const pagesColors = data.map(item =>
     selectedMonth && selectedMonth !== 'All' && item.month === selectedMonth
-      ? 'rgba(176, 155, 58, 0.85)'
-      : 'rgba(246, 231, 178, 0.7)'
+      ? pagesHighlight
+      : 'rgba(208, 139, 91, 0.45)'
   );
 
   const chartData = {
@@ -33,19 +34,19 @@ export default function ReadingChart({ data, selectedMonth }) {
         label: 'Books Read',
         data: data.map((item) => item.books),
         backgroundColor: booksColors,
-        borderColor: '#B03A5B',
+        borderColor: '#7B5A45',
         borderWidth: 2,
         borderRadius: 8,
-        hoverBackgroundColor: highlightColor,
+        hoverBackgroundColor: booksHighlight,
       },
       {
         label: 'Pages Read',
         data: data.map((item) => item.pages),
         backgroundColor: pagesColors,
-        borderColor: '#B09B3A',
+        borderColor: '#D08B5B',
         borderWidth: 2,
         borderRadius: 8,
-        hoverBackgroundColor: 'rgba(249, 239, 175, 1)',
+        hoverBackgroundColor: pagesHighlight,
       },
     ],
   };
@@ -56,31 +57,33 @@ export default function ReadingChart({ data, selectedMonth }) {
       legend: {
         position: 'top',
         labels: {
-          color: '#222',
-          font: { size: 14 },
+          color: '#2F2A25',
+          font: { size: 14, family: "'Source Sans 3', 'Helvetica Neue', Arial, sans-serif" },
         },
       },
       title: {
         display: true,
         text: 'Monthly Reading Overview',
-        color: '#B03A5B',
-        font: { size: 18, weight: 'bold', family: 'Lora, serif' },
+        color: '#7B5A45',
+        font: { size: 18, weight: 'bold', family: "'Cormorant Garamond', 'Merriweather', Georgia, serif" },
       },
       tooltip: {
-        backgroundColor: 'rgba(244, 198, 215, 0.95)',
-        titleColor: '#B03A5B',
-        bodyColor: '#222',
+        backgroundColor: 'rgba(255, 253, 248, 0.98)',
+        titleColor: '#7B5A45',
+        bodyColor: '#2F2A25',
+        borderColor: '#E8DDCF',
+        borderWidth: 1,
       },
     },
     scales: {
       x: {
-        ticks: { color: '#222' },
-        grid: { color: 'rgba(176, 58, 91, 0.08)' },
+        ticks: { color: '#5C5148' },
+        grid: { color: 'rgba(123, 90, 69, 0.08)' },
       },
       y: {
         beginAtZero: true,
-        ticks: { color: '#222' },
-        grid: { color: 'rgba(176, 58, 91, 0.08)' },
+        ticks: { color: '#5C5148' },
+        grid: { color: 'rgba(123, 90, 69, 0.08)' },
       },
     },
   };

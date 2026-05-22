@@ -5,8 +5,9 @@ export default function Toolbar({ selectedMonth, onMonthChange, children }) {
     <header
       style={{
         width: '100%',
-        background: '#F6E7B2',
-        boxShadow: '0 2px 12px rgba(176,58,91,0.08)',
+        background: '#FFFDF8',
+        borderBottom: '1px solid #E8DDCF',
+        boxShadow: '0 2px 12px rgba(47, 42, 37, 0.06)',
         padding: '0.5rem 0',
         marginBottom: '2rem',
         display: 'flex',
@@ -24,7 +25,7 @@ export default function Toolbar({ selectedMonth, onMonthChange, children }) {
           justifyContent: 'space-between',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <span style={{ fontSize: 28, color: '#8A2542', fontWeight: 700, fontFamily: 'Lora, serif', letterSpacing: '0.01em' }}>
+            <span style={{ fontSize: 28, color: '#7B5A45', fontWeight: 700, fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", letterSpacing: '0.01em' }}>
               <span role="img" aria-label="book">📚</span> Reading Dashboard
             </span>
           </div>

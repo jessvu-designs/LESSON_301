@@ -15,14 +15,14 @@ function getGenreCounts(data) {
 }
 
 const pastelColors = [
-  '#F4C6D7', // pink
-  '#E8AFC3', // pink 2
-  '#F6E7B2', // yellow
-  '#B6E2D3', // mint
-  '#C7C6F4', // lavender
-  '#B2D6F6', // baby blue
-  '#FFDAB9', // peach
-  '#F9EFAF', // yellow 2
+  '#7B5A45', // leather brown
+  '#D08B5B', // warm gold-brown
+  '#A87B53', // mid tone
+  '#D4B58A', // soft tan
+  '#8E6B47', // espresso
+  '#C9A47A', // wheat
+  '#6E4F33', // dark spine
+  '#E8DDCF', // muted border tan
 ];
 
 export default function GenresPieChart({ data }) {
@@ -36,7 +36,7 @@ export default function GenresPieChart({ data }) {
       {
         data: values,
         backgroundColor: pastelColors.slice(0, labels.length),
-        borderColor: '#fff',
+        borderColor: '#FFFDF8',
         borderWidth: 2,
       },
     ],
@@ -47,14 +47,16 @@ export default function GenresPieChart({ data }) {
       legend: {
         position: 'bottom',
         labels: {
-          color: '#222',
-          font: { size: 14 },
+          color: '#2F2A25',
+          font: { size: 14, family: "'Source Sans 3', 'Helvetica Neue', Arial, sans-serif" },
         },
       },
       tooltip: {
-        backgroundColor: 'rgba(244, 198, 215, 0.95)',
-        titleColor: '#B03A5B',
-        bodyColor: '#222',
+        backgroundColor: 'rgba(255, 253, 248, 0.98)',
+        titleColor: '#7B5A45',
+        bodyColor: '#2F2A25',
+        borderColor: '#E8DDCF',
+        borderWidth: 1,
       },
       title: {
         display: false, // Hide Chart.js title, use visible heading instead
@@ -66,8 +68,8 @@ export default function GenresPieChart({ data }) {
   return (
     <div style={{ width: '100%' }}>
       <h3 style={{
-        fontFamily: 'Lora, serif',
-        color: '#B03A5B',
+        fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif",
+        color: '#7B5A45',
         fontWeight: 700,
         fontSize: '1.2em',
         textAlign: 'center',

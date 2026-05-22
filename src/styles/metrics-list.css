@@ -16,16 +16,16 @@
 }
 
 .metrics-item {
-  background: #fff;
-  border-radius: 16px;
+  background: var(--bg-surface);
+  border-radius: 12px;
   padding: 1.2rem 2.2rem;
   flex: 1 1 0;
   min-width: 0;
   max-width: none;
-  box-shadow: 0 2px 12px 0 rgba(176, 58, 91, 0.10), 0 1px 4px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 1px 2px rgba(47, 42, 37, 0.04), 0 1px 3px rgba(47, 42, 37, 0.03);
   text-align: left;
-  color: #222;
-  border: 1.5px solid #E8AFC3;
+  color: var(--text-primary);
+  border: 1px solid rgba(232, 221, 207, 0.7);
   transition: background 0.18s, box-shadow 0.18s;
   box-sizing: border-box;
   overflow: hidden;
@@ -37,21 +37,22 @@
 }
 
 .metrics-item:hover {
-  background: #FFF6F0;
-  box-shadow: 0 2px 8px rgba(176,58,91,0.10);
+  background: #FBF5EA;
+  box-shadow: 0 2px 6px rgba(47, 42, 37, 0.06), 0 1px 3px rgba(47, 42, 37, 0.04);
   cursor: pointer;
 }
 
 .metrics-item h3 {
   margin-top: 0;
   margin-bottom: 0.2em;
-  color: #B03A5B;
-  text-shadow: 0 1px 4px rgba(244, 198, 215, 0.18);
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
   font-size: 18px;
 }
 
 .metrics-item p {
-  color: #222;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
   margin-top: 0.1em;
   margin-bottom: 0.3em;
   font-size: 2.4em;
