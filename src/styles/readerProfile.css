@@ -89,10 +89,10 @@
 }
 
 .reader-profile-avatar {
-  width: 96px;
-  height: 96px;
-  min-width: 96px;
-  min-height: 96px;
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -100,6 +100,7 @@
   box-shadow: 0 1px 4px rgba(176,58,91,0.10);
   background: none;
   padding: 0;
+  border: 4px solid #ffe066; /* yellow stroke */
 }
 
 .cartoon-avatar {
