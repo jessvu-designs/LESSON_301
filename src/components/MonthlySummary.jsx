@@ -8,6 +8,8 @@ export default function MonthlySummary({ data, selectedMonth }) {
     // Adding fallbacks for missing metric values
     const books = totals.books ?? 0;
     const pages = totals.pages ?? 0;
+    const hours = totals.hours ?? 0;
+    const toRead = totals.toRead ?? 0;
     summary = (
       <div className="metrics-list">
         <div className="metrics-item kpi-card">
@@ -26,13 +28,13 @@ export default function MonthlySummary({ data, selectedMonth }) {
           <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
             <span role="img" aria-label="Hours" style={{marginRight: '0.3em'}}>⏰</span>Hours
           </h3>
-          <p>{totals.hours ?? 0}</p>
+          <p>{hours}</p>
         </div>
         <div className="metrics-item kpi-card">
           <h3 style={{fontFamily: 'Lora, serif', fontWeight: 700}}>
             <span role="img" aria-label="To-Read" style={{marginRight: '0.3em'}}>📝</span>To-Read
           </h3>
-          <p>{totals.toRead ?? 0}</p>
+          <p>{toRead}</p>
         </div>
       </div>
     );
