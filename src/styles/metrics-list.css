@@ -16,7 +16,7 @@
 }
 
 .metrics-item {
-  background: rgba(244, 198, 215, 0.92);
+  background: #fff;
   border-radius: 16px;
   padding: 1.2rem 2.2rem;
   flex: 1 1 0;
