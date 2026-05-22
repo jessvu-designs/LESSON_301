@@ -19,17 +19,19 @@ const months = [
 export default function MonthPicker({ selected, onChange }) {
   return (
     <div style={{ margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
-      <label htmlFor="month-picker" style={{ fontWeight: 500, color: '#B03A5B' }}>Month:</label>
+      <label htmlFor="month-picker" style={{ fontWeight: 500, color: '#8A2542' }}>Month:</label>
       <select
         id="month-picker"
         value={selected}
         onChange={e => onChange(e.target.value)}
+        tabIndex={0}
+        aria-label="Select month"
         style={{
           borderRadius: '999px',
-          padding: '0.5em 2.2em 0.5em 1.2em', // extra right padding for chevron
+          padding: '0.5em 2.2em 0.5em 1.2em',
           border: '1.5px solid #E8AFC3',
           backgroundColor: '#fff',
-          color: '#B03A5B',
+          color: '#8A2542',
           fontWeight: 600,
           fontSize: '1em',
           outline: 'none',

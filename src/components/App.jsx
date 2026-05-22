@@ -34,22 +34,30 @@ export default function App() {
       <Toolbar selectedMonth={selectedMonth} onMonthChange={setSelectedMonth}>
         <MonthPicker selected={selectedMonth} onChange={setSelectedMonth} />
       </Toolbar>
-      <div className="dashboard-outer">
+      <main className="dashboard-outer" role="main">
         <div className="dashboard-content">
-          <ReaderProfile />
-          <div className="kpi-row">
-            <div style={{ width: '100%' }}>
-              <MonthlySummary data={filteredData} selectedMonth={selectedMonth} />
+          <section aria-labelledby="profile-heading">
+            <ReaderProfile />
+          </section>
+          <section aria-labelledby="summary-heading">
+            <h2 id="summary-heading" className="sr-only">Monthly Summary</h2>
+            <div className="kpi-row">
+              <div style={{ width: '100%' }}>
+                <MonthlySummary data={filteredData} selectedMonth={selectedMonth} />
+              </div>
             </div>
-          </div>
-          <div className="chart-row">
-            <RecentlyReadList />
-            <div className="chart-card">
-              <GenresPieChart data={filteredData} />
+          </section>
+          <section aria-labelledby="charts-heading">
+            <h2 id="charts-heading" className="sr-only">Charts</h2>
+            <div className="chart-row">
+              <RecentlyReadList />
+              <div className="chart-card">
+                <GenresPieChart data={filteredData} />
+              </div>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
     </>
   );
 }

@@ -5,6 +5,7 @@
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(176,58,91,0.08);
+  border: 2px solid #E8AFC3;
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@
   font-family: 'Lora', serif;
   font-weight: 700;
   font-size: 18px;
-  color: #B03A5B;
+  color: #8A2542;
   margin-bottom: 0.7rem;
   margin-top: 0.2rem;
 }
@@ -74,5 +75,5 @@
   font-size: 1.1em;
 }
 .star.filled {
-  color: #B03A5B;
+  color: #8A2542;
 }

@@ -1,24 +1,32 @@
 import React from 'react';
 import '../styles/readerProfile.css';
 
+const AVATAR_SRC = '/headshot.jpeg';
+const AVATAR_SIZE = 112;
+
 export default function ReaderProfile() {
-  // Avatar with user headshot
   return (
-    <div className="reader-profile-header card-bg">
+    <header className="reader-profile-header card-bg" role="region" aria-labelledby="profile-heading">
       <div className="reader-profile-avatar">
         <img
-          src="/headshot.jpeg"
-          alt="User headshot"
-          style={{ width: '112px', height: '112px', borderRadius: '50%', objectFit: 'cover', display: 'block' }}
+          src={AVATAR_SRC}
+          alt="Portrait of Jess Vu, smiling and wearing glasses"
+          style={{
+            width: AVATAR_SIZE,
+            height: AVATAR_SIZE,
+            borderRadius: '50%',
+            objectFit: 'cover',
+            display: 'block',
+          }}
         />
       </div>
       <div className="reader-profile-info">
-        <div className="reader-profile-name">Jess Vu</div>
-        <div className="reader-profile-desc">Avid reader & lifelong learner</div>
-        <div className="reader-profile-meta">Member since 2024 • Favorite genre: Fiction</div>
+        <h1 id="profile-heading" className="reader-profile-name">Jess Vu</h1>
+        <p className="reader-profile-desc">Avid reader & lifelong learner</p>
+        <p className="reader-profile-meta">Member since 2024 • Favorite genre: Fiction</p>
         <div className="profile-info-row">
           <div className="currently-reading-visual">
-            <span className="book-cover-placeholder">📘</span>
+            <span className="book-cover-placeholder" aria-hidden="true">📘</span>
             <span className="currently-reading-label">Currently Reading:</span>
             <span className="currently-reading-book">
               <span className="book-title">Atomic Habits</span>
@@ -32,6 +40,6 @@ export default function ReaderProfile() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

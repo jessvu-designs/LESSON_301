@@ -24,7 +24,7 @@ export default function Toolbar({ selectedMonth, onMonthChange, children }) {
           justifyContent: 'space-between',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <span style={{ fontSize: 28, color: '#B03A5B', fontWeight: 700, fontFamily: 'Lora, serif', letterSpacing: '0.01em' }}>
+            <span style={{ fontSize: 28, color: '#8A2542', fontWeight: 700, fontFamily: 'Lora, serif', letterSpacing: '0.01em' }}>
               <span role="img" aria-label="book">📚</span> Reading Dashboard
             </span>
           </div>

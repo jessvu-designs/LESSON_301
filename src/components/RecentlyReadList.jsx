@@ -12,9 +12,9 @@ const recentBooks = [
 
 function renderStars(rating) {
   return (
-    <span className="stars">
+    <span className="stars" aria-label={`Rating: ${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) =>
-        <span key={i} className={i < rating ? 'star filled' : 'star'}>★</span>
+        <span key={i} className={i < rating ? 'star filled' : 'star'} aria-hidden="true">★</span>
       )}
     </span>
   );
@@ -27,7 +27,7 @@ export default function RecentlyReadList() {
       <ul className="recently-read-list">
         {recentBooks.map((book, idx) => (
           <li key={idx} className="recently-read-item">
-            <img className="book-cover" src={book.cover} alt={book.title + ' cover'} />
+            <img className="book-cover" src={book.cover} alt={`Cover of ${book.title} by ${book.author}`} />
             <div className="book-info">
               <span className="book-title">{book.title}</span>
               <span className="book-author">by {book.author}</span>
