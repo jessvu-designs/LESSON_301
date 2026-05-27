@@ -1,14 +1,17 @@
 import React from 'react';
 import '../styles/recentlyReadList.css';
 
-// Example data, replace with real data as needed
 const recentBooks = [
   { title: 'Atomic Habits', author: 'James Clear', rating: 5, cover: 'https://covers.openlibrary.org/b/id/10594763-S.jpg' },
   { title: 'The Midnight Library', author: 'Matt Haig', rating: 4.5, cover: 'https://covers.openlibrary.org/b/id/10594764-S.jpg' },
   { title: 'Educated', author: 'Tara Westover', rating: 4, cover: 'https://covers.openlibrary.org/b/id/10594765-S.jpg' },
   { title: 'Project Hail Mary', author: 'Andy Weir', rating: 3.5, cover: 'https://covers.openlibrary.org/b/id/10594766-S.jpg' },
-  { title: 'The Silent Patient', author: 'Alex Michaelides', rating: 2, cover: 'https://covers.openlibrary.org/b/id/10594767-S.jpg' },
 ];
+
+const featuredHighlight = {
+  quote: 'You do not rise to the level of your goals. You fall to the level of your systems.',
+  source: 'Atomic Habits \u00b7 James Clear',
+};
 
 function renderStars(rating) {
   return (
@@ -18,9 +21,8 @@ function renderStars(rating) {
           return <span key={i} className="star filled" aria-hidden="true">★</span>;
         } else if (i < rating && rating % 1 !== 0) {
           return <span key={i} className="star half" aria-hidden="true">★</span>;
-        } else {
-          return <span key={i} className="star" aria-hidden="true">★</span>;
         }
+        return <span key={i} className="star" aria-hidden="true">★</span>;
       })}
       <span className="star-rating-number" aria-hidden="true">{rating.toFixed(1)}</span>
     </span>
@@ -29,8 +31,18 @@ function renderStars(rating) {
 
 export default function RecentlyReadList() {
   return (
-    <div className="recently-read-card">
-      <h3 className="recently-read-title">Recently Read</h3>
+    <section className="moments-card" aria-labelledby="moments-heading">
+      <header>
+        <h3 id="moments-heading" className="panel__title">Moments &amp; Highlights</h3>
+        <p className="panel__hint">A line that stayed with you, and the books you closed most recently.</p>
+      </header>
+
+      <blockquote className="highlight-quote">
+        <p className="highlight-quote__text">“{featuredHighlight.quote}”</p>
+        <cite className="highlight-quote__attr">— {featuredHighlight.source}</cite>
+      </blockquote>
+
+      <span className="recently-read-subhead">Recently Closed</span>
       <ul className="recently-read-list">
         {recentBooks.map((book, idx) => (
           <li key={idx} className="recently-read-item">
@@ -43,6 +55,6 @@ export default function RecentlyReadList() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

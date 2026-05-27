@@ -1,22 +1,35 @@
+.month-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.month-picker__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
 select#month-picker {
-  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
   font-family: var(--font-body);
   color: var(--text-primary);
-  border: 1px solid var(--border-muted);
-}
-select#month-picker:hover, select#month-picker:focus {
-  box-shadow: 0 4px 24px 0 rgba(123, 90, 69, 0.16), 0 2px 8px 0 rgba(47, 42, 37, 0.06);
-  border: 1.5px solid var(--accent-primary);
-  transform: translateY(-1px) scale(1.01);
-  cursor: pointer;
-}
-select#month-picker {
-  padding-right: 3.5em !important;
-  background-color: var(--bg-surface);
-  /* Remove default arrow */
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.45em 2.4em 0.45em 1em;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 90, 69, 0.2);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* Custom chevron SVG as background, tinted with primary accent */
-  background: url('data:image/svg+xml;utf8,<svg fill="%237B5A45" height="32" viewBox="0 0 20 20" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 0.5em center/2em auto var(--bg-surface);
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 7.5l4.5 4.5 4.5-4.5" stroke="%237B5A45" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat right 0.85em center/14px auto var(--bg-surface);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+select#month-picker:hover,
+select#month-picker:focus-visible {
+  border-color: var(--accent-blush);
+  box-shadow: 0 2px 12px rgba(232, 183, 200, 0.35);
 }

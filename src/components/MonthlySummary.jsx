@@ -1,84 +1,39 @@
-
+import React from 'react';
 import { getYearlyTotals } from '../utils/dataUtils';
 
+function Stat({ label, value, unit }) {
+  return (
+    <div className="stat-strip__item">
+      <span className="stat-strip__label">{label}</span>
+      <span className="stat-strip__value">
+        {value}
+        {unit ? <span className="stat-strip__unit"> {unit}</span> : null}
+      </span>
+    </div>
+  );
+}
+
 export default function MonthlySummary({ data, selectedMonth }) {
-  let summary = null;
-  if (selectedMonth === 'All') {
-    const totals = getYearlyTotals(data);
-    // Adding fallbacks for missing metric values
-    const books = totals.books ?? 0;
-    const pages = totals.pages ?? 0;
-    const hours = totals.hours ?? 0;
-    const toRead = totals.toRead ?? 0;
-    summary = (
-      <div className="metrics-list">
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="Books" style={{marginRight: '0.3em'}}>📚</span>Books Read
-          </h3>
-          <p>{books}</p>
-        </div>
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="Pages" style={{marginRight: '0.3em'}}>📄</span>Pages Read
-          </h3>
-          <p>{pages}</p>
-        </div>
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="Hours" style={{marginRight: '0.3em'}}>⏰</span>Hours
-          </h3>
-          <p>{hours}</p>
-        </div>
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="To-Read" style={{marginRight: '0.3em'}}>📝</span>To-Read
-          </h3>
-          <p>{toRead}</p>
-        </div>
+  if (!data || data.length === 0) {
+    return (
+      <div className="stat-strip" role="group" aria-label="Monthly summary">
+        <Stat label="No reading recorded yet" value="\u2014" />
       </div>
     );
-  } else if (data.length === 1) {
-    const item = data[0];
-    const books = item.books ?? 0;
-    const pages = item.pages ?? 0;
-    const hours = item.hours ?? 0;
-    const toRead = item.toRead ?? 0;
-    summary = (
-      <div className="metrics-list">
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="Books" style={{marginRight: '0.3em'}}>📚</span>Books
-          </h3>
-          <p>{books}</p>
-        </div>
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="Pages" style={{marginRight: '0.3em'}}>📄</span>Pages
-          </h3>
-          <p>{pages}</p>
-        </div>
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="Hours" style={{marginRight: '0.3em'}}>⏰</span>Hours
-          </h3>
-          <p>{hours}</p>
-        </div>
-        <div className="metrics-item kpi-card">
-          <h3 style={{fontFamily: "'Cormorant Garamond', 'Merriweather', Georgia, serif", fontWeight: 700}}>
-            <span role="img" aria-label="To-Read" style={{marginRight: '0.3em'}}>📝</span>To-Read
-          </h3>
-          <p>{toRead}</p>
-        </div>
-      </div>
-    );
-  } else {
-    summary = <div className="metrics-list"><div className="metrics-item kpi-card">No data</div></div>;
   }
 
+  const source = selectedMonth === 'All' ? getYearlyTotals(data) : data[0];
+  const books = source.books ?? 0;
+  const pages = source.pages ?? 0;
+  const hours = source.hours ?? 0;
+  const pace = source.avgReadingTime ?? 0;
+
   return (
-    <div className="monthly-summary">
-      {summary}
+    <div className="stat-strip" role="group" aria-label="Monthly summary">
+      <Stat label="Books You Traveled Through" value={books} />
+      <Stat label="Pages You Sat With" value={pages.toLocaleString()} />
+      <Stat label="Hours You Gave Yourself" value={hours} unit="hrs" />
+      <Stat label="Your Usual Reading Pace" value={pace} unit="min / session" />
     </div>
   );
 }
