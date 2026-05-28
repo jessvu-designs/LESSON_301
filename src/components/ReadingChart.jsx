@@ -12,6 +12,19 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
+// Adds vertical space between the legend and the chart area.
+const legendSpacingPlugin = {
+  id: 'legendSpacing',
+  beforeInit(chart) {
+    if (!chart.legend) return;
+    const originalFit = chart.legend.fit;
+    chart.legend.fit = function fit() {
+      originalFit.call(this);
+      this.height += 24;
+    };
+  },
+};
+
 export default function ReadingChart({ data, selectedMonth }) {
   const isHighlighted = (m) => selectedMonth && selectedMonth !== 'All' && m === selectedMonth;
 
@@ -59,17 +72,17 @@ export default function ReadingChart({ data, selectedMonth }) {
   const options = {
     responsive: true,
     layout: {
-      padding: { top: 36, right: 4, bottom: 4, left: 4 },
+      padding: { top: 0, right: 4, bottom: 4, left: 4 },
     },
     plugins: {
       legend: {
         position: 'top',
-        align: 'end',
+        align: 'center',
         labels: {
           color: '#3E332D',
           usePointStyle: true,
           boxWidth: 8,
-          padding: 28,
+          padding: 20,
           font: { size: 13, family: "'Source Sans 3', 'Helvetica Neue', Arial, sans-serif" },
         },
       },
@@ -105,6 +118,6 @@ export default function ReadingChart({ data, selectedMonth }) {
   };
 
   return (
-    <Bar data={chartData} options={{ ...options, maintainAspectRatio: false }} />
+    <Bar data={chartData} options={{ ...options, maintainAspectRatio: false }} plugins={[legendSpacingPlugin]} />
   );
 }
